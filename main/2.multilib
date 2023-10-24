@@ -1,0 +1,25 @@
+#!/bin/bash
+read -p "This will add multilib to your pacman.conf, if you have already enabled it please input N (y/N): " response
+
+if [[ "$response" =~ ^[Yy]$ ]]; then
+    echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf
+    sudo pacman -Syu
+
+else
+    echo "multilib WASN'T added"
+fi
+
+clear
+echo -e "\e[34m  __                                                                __                \e[0m"
+sleep 0.05
+echo -e "\e[34m /  |           /              /           /         / /           /  |           /   \e[0m"
+sleep 0.05
+echo -e "\e[35m(___| ___  ___ (___           (  ___  ___ (___  ___ ( (           (___| ___  ___ (___ \e[0m"
+sleep 0.05
+echo -e "\e[35m|    |   )|___ |              | |   )|___ |    |   )| |           |   )|   )|    |   )\e[0m"
+sleep 0.05
+echo -e "\e[36m|    |__/  __/ |__            | |  /  __/ |__  |__/|| |           |  / |    |__  |  / \e[0m"
+sleep 0.05
+echo -e "\e[36m--------------------------------------------------------------------------------------\e[0m"
+chosenOption=$(echo $(\ls | smenu -c))
+./$chosenOption

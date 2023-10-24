@@ -1,0 +1,51 @@
+#!/bin/bash
+
+clear
+echo -e "\e[34m  __                                                                __                \e[0m"
+sleep 0.05
+echo -e "\e[34m /  |           /              /           /         / /           /  |           /   \e[0m"
+sleep 0.05
+echo -e "\e[35m(___| ___  ___ (___           (  ___  ___ (___  ___ ( (           (___| ___  ___ (___ \e[0m"
+sleep 0.05
+echo -e "\e[35m|    |   )|___ |              | |   )|___ |    |   )| |           |   )|   )|    |   )\e[0m"
+sleep 0.05
+echo -e "\e[36m|    |__/  __/ |__            | |  /  __/ |__  |__/|| |           |  / |    |__  |  / \e[0m"
+sleep 0.05
+echo -e "\e[36m--------------------------------------------------------------------------------------\e[0m"
+
+yay -S cheatbreaker jdk-openjdk steam zenity gamemode lib32-gamemode mangohud lib32-mangohud code gnome-software flatpak zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.github.tchx84.Flatseal
+flatpak install flathub com.logseq.Logseq
+flatpak install flathub com.usebottles.bottles
+flatpak install flathub io.mrarm.mcpelauncher
+flatpak install flathub com.leinardi.gwe
+flatpak install flathub org.kde.kdenlive
+flatpak install flathub org.audacityteam.Audacity
+flatpak install flathub com.discordapp.Discord
+
+read -p "Do you want to install Vencord (Breaks Discord TOS)? (y/N): " response
+
+if [[ "$response" =~ ^[Yy]$ ]]; then
+    sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
+    
+else
+    echo "Skipped Install of Vencord."
+fi
+
+clear
+echo "  __                                                                __                "
+sleep 0.05
+echo " /  |           /              /           /         / /           /  |           /   "
+sleep 0.05
+echo "(___| ___  ___ (___           (  ___  ___ (___  ___ ( (           (___| ___  ___ (___ "
+sleep 0.05
+echo "|    |   )|___ |              | |   )|___ |    |   )| |           |   )|   )|    |   )"
+sleep 0.05
+echo "|    |__/  __/ |__            | |  /  __/ |__  |__/|| |           |  / |    |__  |  / "
+sleep 0.05
+echo "--------------------------------------------------------------------------------------"
+chosenOption=$(echo $(\ls | smenu -c))
+bash ./"$chosenOption"
+echo $chosenOption
