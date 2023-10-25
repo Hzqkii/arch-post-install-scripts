@@ -16,6 +16,8 @@ echo -e "\e[36m-----------------------------------------------------------------
 yay -S cheatbreaker jdk-openjdk steam zenity gamemode lib32-gamemode mangohud lib32-mangohud code gnome-software flatpak zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.gnome.Platform/x86_64/44
+flatpak install flathub org.kde.Platform/x86_64/5.15-22.08
 flatpak install flathub com.github.tchx84.Flatseal
 flatpak install flathub com.logseq.Logseq
 flatpak install flathub com.usebottles.bottles
@@ -25,9 +27,9 @@ flatpak install flathub org.kde.kdenlive
 flatpak install flathub org.audacityteam.Audacity
 flatpak install flathub com.discordapp.Discord
 
-read -p "Do you want to install Vencord (Breaks Discord TOS)? (y/N): " response
+read -p "Do you want to install Vencord (Breaks Discord TOS)? (Y/n): " response
 
-if [[ "$response" =~ ^[Yy]$ ]]; then
+if [[ "$response" =~ ^[Nn]$ ]]; then
     sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
     
 else
