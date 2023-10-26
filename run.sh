@@ -6,6 +6,7 @@ else
     sleep 0.01
 fi
 
+rm -rf ./arch-post-install-scripts
 git clone https://github.com/Hzqkii/arch-post-install-scripts
 cd arch-post-install-scripts
 chmod +x postinstall.sh
