@@ -1,5 +1,5 @@
 #!/bin/bash
-flatpak install flathub com.vscodium.codium
+flatpak install -y flathub com.vscodium.codium
 
 cd ../main
 clear

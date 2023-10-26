@@ -1,6 +1,6 @@
 #!/bin/bash
 
-flatpak install flathub org.kde.kdenlive
+flatpak install -y flathub org.kde.kdenlive
 
 cd ../main
 clear

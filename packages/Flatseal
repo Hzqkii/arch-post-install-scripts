@@ -1,6 +1,6 @@
 #!/bin/bash
 
-flatpak install flathub com.github.tchx84.Flatseal
+flatpak install -y flathub com.github.tchx84.Flatseal
 
 cd ../main
 clear

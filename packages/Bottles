@@ -1,4 +1,4 @@
 #!/bin/bash
 
-flatpak install flathub com.usebottles.bottles
+flatpak install -y flathub com.usebottles.bottles
 

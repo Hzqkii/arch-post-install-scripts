@@ -1,6 +1,6 @@
 #!/bin/bash
 
-flatpak install flathub com.leinardi.gwe
+flatpak install -y flathub com.leinardi.gwe
 
 cd ../main
 clear

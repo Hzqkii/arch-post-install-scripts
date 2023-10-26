@@ -1,6 +1,6 @@
 #!/bin/bash
 
-flatpak install flathub org.audacityteam.Audacity
+flatpak install -y flathub org.audacityteam.Audacity
 
 cd ../main
 clear
