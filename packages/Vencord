@@ -1,15 +1,17 @@
 #!/bin/bash
-read -p "This will add multilib to your pacman.conf, if you have already enabled it please input N (y/N): " response
+read -p "Do you want to install Vencord (Breaks Discord TOS)? (Y/n): " response
 
-sudo cp /etc/pacman.conf /etc/pacman.conf.bak
-if [[ "$response" =~ ^[Yy]$ ]]; then
-    echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf
-    sudo pacman -Syu
+if [[ "$response" =~ ^[Nn]$ ]]; then
+    
+    echo "Skipped Install of Vencord."
 
 else
-    echo "multilib WASN'T added"
+
+    sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
+
 fi
 
+cd ../main
 clear
 echo -e "\e[34m  __                                                                __                \e[0m"
 sleep 0.05

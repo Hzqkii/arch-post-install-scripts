@@ -7,24 +7,24 @@ if ! command -v smenu &> /dev/null; then
     chmod +x build.sh
     ./build.sh
     sudo make install
+    sudo rm -rfd smenu
 else
     echo "smenu is already installed."
 fi
 
 cd $execdir
-sudo rm -rfd smenu
 clear
-echo -e "\e[34m  __                                                                __                \e[0m"
+echo -e "\e[34m\e[1m  __                                                                __                \e[0m"
 sleep 0.05
-echo -e "\e[34m /  |           /              /           /         / /           /  |           /   \e[0m"
+echo -e "\e[34m\e[1m /  |           /              /           /         / /           /  |           /   \e[0m"
 sleep 0.05
-echo -e "\e[35m(___| ___  ___ (___           (  ___  ___ (___  ___ ( (           (___| ___  ___ (___ \e[0m"
+echo -e "\e[35m\e[1m(___| ___  ___ (___           (  ___  ___ (___  ___ ( (           (___| ___  ___ (___ \e[0m"
 sleep 0.05
-echo -e "\e[35m|    |   )|___ |              | |   )|___ |    |   )| |           |   )|   )|    |   )\e[0m"
+echo -e "\e[35m\e[1m|    |   )|___ |              | |   )|___ |    |   )| |           |   )|   )|    |   )\e[0m"
 sleep 0.05
-echo -e "\e[36m|    |__/  __/ |__            | |  /  __/ |__  |__/|| |           |  / |    |__  |  / \e[0m"
+echo -e "\e[36m\e[1m|    |__/  __/ |__            | |  /  __/ |__  |__/|| |           |  / |    |__  |  / \e[0m"
 sleep 0.05
-echo -e "\e[36m--------------------------------------------------------------------------------------\e[0m"
+echo -e "\e[36m\e[1m--------------------------------------------------------------------------------------\e[0m"
 cd main
 chmod +x *
 chosenOption=$(echo $(\ls | smenu -c ))
