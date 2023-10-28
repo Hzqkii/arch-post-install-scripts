@@ -64,7 +64,6 @@ for package in "${programs[@]}"; do
     sleep 0.05
   fi
 done
-cd ../main
 clear
 echo -e "\e[34m\e[1m  __                                                                __                \e[0m"
 sleep 0.05
