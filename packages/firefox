@@ -1,0 +1,19 @@
+#!/bin/bash
+
+flatpak install -y flathub org.mozilla.firefox
+
+cd ../main
+clear
+echo -e "\e[34m  __                                                                __                \e[0m"
+sleep 0.05
+echo -e "\e[34m /  |           /              /           /         / /           /  |           /   \e[0m"
+sleep 0.05
+echo -e "\e[35m(___| ___  ___ (___           (  ___  ___ (___  ___ ( (           (___| ___  ___ (___ \e[0m"
+sleep 0.05
+echo -e "\e[35m|    |   )|___ |              | |   )|___ |    |   )| |           |   )|   )|    |   )\e[0m"
+sleep 0.05
+echo -e "\e[36m|    |__/  __/ |__            | |  /  __/ |__  |__/|| |           |  / |    |__  |  / \e[0m"
+sleep 0.05
+echo -e "\e[36m--------------------------------------------------------------------------------------\e[0m"
+chosenOption=$(echo $(\ls | smenu -c))
+./$chosenOption
