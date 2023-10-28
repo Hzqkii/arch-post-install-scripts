@@ -64,3 +64,20 @@ for package in "${programs[@]}"; do
     sleep 0.05
   fi
 done
+cd ../main
+clear
+echo -e "\e[34m\e[1m  __                                                                __                \e[0m"
+sleep 0.05
+echo -e "\e[34m\e[1m /  |           /              /           /         / /           /  |           /   \e[0m"
+sleep 0.05
+echo -e "\e[35m\e[1m(___| ___  ___ (___           (  ___  ___ (___  ___ ( (           (___| ___  ___ (___ \e[0m"
+sleep 0.05
+echo -e "\e[35m\e[1m|    |   )|___ |              | |   )|___ |    |   )| |           |   )|   )|    |   )\e[0m"
+sleep 0.05
+echo -e "\e[36m\e[1m|    |__/  __/ |__            | |  /  __/ |__  |__/|| |           |  / |    |__  |  / \e[0m"
+sleep 0.05
+echo -e "\e[36m\e[1m--------------------------------------------------------------------------------------\e[0m"
+cd main
+chmod +x *
+chosenOption=$(echo $(\ls | smenu -c ))
+./$chosenOption
