@@ -1,12 +1,2 @@
 #!/bin/bash
-read -p "Do you want to install Vencord (Breaks Discord TOS)? (Y/n): " response
-
-if [[ "$response" =~ ^[Nn]$ ]]; then
-    
-    echo "Skipped Install of Vencord."
-
-else
-
-    sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
-
-fi
+sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
